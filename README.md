@@ -64,7 +64,7 @@ cd TodoApp
 ```bash
 npm run build
 ```
-### 2. Chạy dự án
+### 3. Chạy dự án
 ```bash
 npm run start
 ```
