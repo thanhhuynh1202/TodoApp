@@ -17,9 +17,15 @@
 
 ---
 
-## 📂 Cấu trúc thư mục
-
+## 📁 Cấu trúc thư mục
+```tes
+TodoApp/
+│── backend/     # Source code backend (Node.js + Express + MySQL)
+│── frontend/    # Source code frontend (ReactJS)
+│── package.json # Script quản lý build & start
+```
 ### Backend (`/backend`)
+```test
 backend/
 │── src/
 │ ├── config/ # Cấu hình DB
@@ -29,8 +35,9 @@ backend/
 │ └── server.js # Điểm khởi chạy Express server
 │
 ├── package.json
-
+```
 ### Frontend (`/frontend`)
+```test
 frontend/
 │── public/
 │── src/
@@ -44,5 +51,30 @@ frontend/
 │ └── index.css
 │
 ├── package.json
-
+```
 ---
+## ⚙️ Cài đặt & Chạy dự án
+
+### 1. Clone repo
+```bash
+git clone https://github.com/thanhhuynh1202/TodoApp
+cd TodoApp
+```
+### 2. Cài đặt dependencies & build frontend
+```bash
+npm run build
+```
+### 2. Chạy dự án
+```bash
+npm run start
+```
+Sau đó mở [http://localhost:5001](http://localhost:5001) để xem ứng dụng.
+## 🌐 API Backend (Express + MongoDB)
+
+| Method | Endpoint       | Mô tả                                                |
+|--------|----------------|------------------------------------------------------|
+| GET    | `/api/tasks`   | Lấy tất cả task (có filter: today, week, month, all) |
+| POST   | `/api/tasks`   | Tạo task mới                                         |
+| PUT    | `/api/tasks/:id` | Cập nhật task                                      |
+| DELETE | `/api/tasks/:id` | Xóa task                                           |
+
