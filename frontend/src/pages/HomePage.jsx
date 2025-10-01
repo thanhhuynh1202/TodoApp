@@ -81,14 +81,21 @@ const HomePage = () => {
   const totalPages = Math.ceil(filteredTasks.length / visibleTaskLimit);
 
   return (
-    <div className="min-h-screen w-full bg-[#fefcff] relative">
-      {/* Dreamy Sky Pink Glow */}
+    <div className="min-h-screen w-full relative bg-white">
+      {/* Teal Glow Top */}
       <div
         className="absolute inset-0 z-0"
         style={{
+          background: "#ffffff",
           backgroundImage: `
-        radial-gradient(circle at 30% 70%, rgba(173, 216, 230, 0.35), transparent 60%),
-        radial-gradient(circle at 70% 30%, rgba(255, 182, 193, 0.4), transparent 60%)`,
+        radial-gradient(
+          circle at top center,
+          rgba(56, 193, 182, 0.5),
+          transparent 70%
+        )
+      `,
+          filter: "blur(80px)",
+          backgroundRepeat: "no-repeat",
         }}
       />
       {/* Your Content/Components */}

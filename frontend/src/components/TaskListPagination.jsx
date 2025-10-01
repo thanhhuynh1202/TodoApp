@@ -31,7 +31,7 @@ const TaskListPagination = ({
       } else if (page >= totalPages - 1) {
         pages.push(1, "...", totalPages - 2, totalPages - 1, totalPages);
       } else {
-        pages.push(1, "...", page, "...", totalPages);
+        pages.push(1, "...", page - 1, page, page + 1, "...", totalPages);
       }
     }
     return pages;
